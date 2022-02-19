@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kabul University</title>
+    {% include 'links/cssLinks.html' %}
+</head>
+<body>
+    
+    {% include 'components/navbar.html' %}
+    <div class="container">
+        <div id="carouselExampleControls" class="carousel slide mt-3" data-bs-ride="carousel">
+            <div class="carousel-inner" style="max-height: 400px;">
+              <div class="carousel-item active">
+                <img src="{% static 'images/slider/1.jpg' %}" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="{% static 'images/slider/2.jpg' %}" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="{% static 'images/slider/3.jpg' %}" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        {% block content %}
+
+        {% endblock content %}
+
+    </div>
+    {% include 'components/footer.html' %}
+
+    {% include 'links/jsLinks.html' %}
+</body>
+</html>
